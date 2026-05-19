@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,::before,::after{margin: 0; box-sizing: border-box;}
+a{text-decoration: none;}
+img{ vertical-align: bottom;}
+
+html{ 
+     font-size: 10px;
+     --blue:#132577;
+     --black:#000;
+     --white:#fff;
+     --lgray:#92989F;
+     --yellow:#FFC107;
+     --grayop5:#7d7d7d80;
+}
+
+body{ font: 16px poppins, sans-serif;}
+
+.container{ max-width: 1260px; margin: auto; padding: 0 1rem }
+
+.row{ display: grid; grid-template-columns: repeat(12,1fr); gap: 2rem; }
+.col-1{ grid-column: span 1; }
+.col-2{ grid-column: span 2; }
+.col-3{ grid-column: span 3; }
+.col-4{ grid-column: span 4; }
+.col-5{ grid-column: span 5; }
+.col-6{ grid-column: span 6; }
+.col-7{ grid-column: span 7; }
+.col-8{ grid-column: span 8; }
+.col-9{ grid-column: span 9; }
+.col-10{ grid-column: span 10; }
+.col-11{ grid-column: span 11; }
+.col-12{ grid-column: span 12; }
+.align-item-center{ align-items: center;}
+.jutify-right{ justify-content: end;}
+.jutify-space-bet{ justify-content: space-between;}
+.flex{ display: flex;}
+
+
+/* layout */
+.wrap-1{ background: url() var(--blue); color: var(--white); }
+header{ padding: 6rem 0;}
+header h1 a{ color: inherit;}
+nav{}
+nav ul{ list-style: none; padding: 0; gap: 3rem;}
+nav li{}
+nav a{ display: block; color: inherit; font-weight: 600; font-size: 14px;}
+.banner{ padding-bottom: 8.5rem;}
+
+
+.wrap-2{ background: var(--white); }
+
+
+.wrap-3{  background: var(--blue); color: var(--white);}
+
+
+
+@media screen and (max-width:1278px){
+     
+}
+
+@media screen and (max-width:980px){
+     
+}
+
+@media screen and (max-width:767px){
+     
+}
+
+@media screen and (max-width:460px){
+     
+}
