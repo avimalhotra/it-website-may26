@@ -32,6 +32,7 @@ body{ font: 16px poppins, sans-serif;}
 .col-12{ grid-column: span 12; }
 .align-item-center{ align-items: center;}
 .jutify-right{ justify-content: end;}
+.jutify-center{ justify-content: center;}
 .jutify-space-bet{ justify-content: space-between;}
 .flex{ display: flex;}
 .img-resp{ max-width: 100%; height: auto;}
@@ -73,14 +74,38 @@ article h2+p{ margin-bottom: 4rem;}
 .about-text p:nth-child(3){margin: 2rem 0 3rem; font-size: 14px; line-height: 1.8; }
 .about-text ul{ font-size: 14px; font-weight: 500; line-height: 40px;}
 
+.our-work{ margin: 10rem 0;}
+.works{ margin-top: 4rem;}
+.works ul{ list-style: none; padding: 0; gap: 2rem;}
+.works .vert{ display: block; color: var(--blue); font-size: 24px; font-weight: 500; writing-mode: sideways-lr; line-height: 81px; height: 300px; text-align: center; box-shadow: 0 0 18px #0000001a; border-radius: 5px; border: 2px solid transparent;}
+.collapse{ display: none; }
+.works li.active .collapse{ display: block;}
+.works li.active .vert, .works li:hover .vert{ border-color: var(--blue);}
+.works li .flex{ gap: 2rem; }
+.works .pic{ flex-shrink: 0;}
+.works h3{ font-size: 24px; font-weight: 500;}
+.works p{ font-size: 14px; opacity: 0.6; margin: 1rem  0 2rem;}
+.works .link{ display: block; width: 184px; line-height: 51px; background: var(--blue); color: var(--white); text-align: center; border-radius: 5px;}
+
+
+.testimonials{ text-align: center; }
+.testimonials .row{ margin-top: 4rem; }
+.card svg{ margin-bottom: 2rem;}
+.ratings{ margin-top: 2rem;}
+.rating{ color: var(--grayop5);}
+.rating.starf{ color: var(--yellow)}
+.card .shadow{box-shadow: 0 0 18px #0000001a; padding: 64px 64px 0;}
+.card .footer{ padding-top: 54px;}
+.card img{ transform: translateY(34px); }
+
 
 .wrap-3{  background: var(--blue); color: var(--white);}
-
 
 
 @media screen and (max-width:1278px){
      .banner-text{ margin-right: 60px; }
      .box{ padding-inline: 15px 15px;}
+     .card .shadow{ padding-inline: 34px; }
 }
 
 @media screen and (max-width:980px){
@@ -100,6 +125,9 @@ article h2+p{ margin-bottom: 4rem;}
      nav ul{ gap: 2rem;}
      .banner-text{ margin-right: 0; }
      .banner img{ display: block; margin: auto; float: none;}
+     .works :is(ul, li > .flex){ flex-flow: column; }
+     .works .vert{ writing-mode: horizontal-tb; height: auto; }
+     .card .shadow{ padding-inline: 20px; }
 }
 
 @media screen and (max-width:767px){
@@ -117,6 +145,7 @@ article h2+p{ margin-bottom: 4rem;}
      .col-m-12{ grid-column: span 12; }
      nav{ display: none;}
      .menu{ display: inline-block; }
+     .card .shadow{ padding-inline: 10px; }
 }
 
 @media screen and (max-width:460px){
@@ -132,4 +161,5 @@ article h2+p{ margin-bottom: 4rem;}
      .col-p-10{ grid-column: span 10; }
      .col-p-11{ grid-column: span 11; }
      .col-p-12{ grid-column: span 12; }
+     .works .collapse .flex{ flex-flow: column;}
 }
