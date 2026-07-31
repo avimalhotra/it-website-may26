@@ -46,7 +46,11 @@ header h1 a{ color: inherit;}
 nav ul{ list-style: none; padding: 0; gap: 3rem;}
 nav a{ display: block; color: inherit; font-weight: 600; font-size: 14px;}
 .menu{ border: 1px solid var(--white); background: none; border-radius: 5px; display: none; }
-.menu span{display: block; width: 60px; height: 1px; background: var(--white); margin: 5px 0; }
+.menu span{display: block; width: 60px; height: 1px; background: var(--white); margin: 5px 0; transform-origin: right center; transition: .3s; }
+.menu.active span:nth-child(1){ rotate: -12deg; }
+.menu.active span:nth-child(2){ opacity: 0; }
+.menu.active span:nth-child(3){ rotate: 12deg; }
+
 .banner{ padding-bottom: 8.5rem;}
 .banner img{ float: right;}
 .banner-text{ margin-right: 112px; }
@@ -79,8 +83,8 @@ article h2+p{ margin-bottom: 4rem;}
 .works ul{ list-style: none; padding: 0; gap: 2rem;}
 .works .vert{ display: block; color: var(--blue); font-size: 24px; font-weight: 500; writing-mode: sideways-lr; line-height: 81px; height: 300px; text-align: center; box-shadow: 0 0 18px #0000001a; border-radius: 5px; border: 2px solid transparent;}
 .collapse{ display: none; }
-.works li.active .collapse{ display: block;}
-.works li.active .vert, .works li:hover .vert{ border-color: var(--blue);}
+.works li:first-child .collapse{ display: block;}
+.works li .vert.active, .works li:hover .vert{ border-color: var(--blue);}
 .works li .flex{ gap: 2rem; }
 .works .pic{ flex-shrink: 0;}
 .works h3{ font-size: 24px; font-weight: 500;}
@@ -164,7 +168,8 @@ article h2+p{ margin-bottom: 4rem;}
      .col-m-10{ grid-column: span 10; }
      .col-m-11{ grid-column: span 11; }
      .col-m-12{ grid-column: span 12; }
-     nav{ display: none;}
+     nav{ display: none; position: absolute; left: 1rem; right: 1rem; top: 12rem; background: #132577dd; }
+     nav ul{ flex-flow: column; text-align: right;}
      .menu{ display: inline-block; }
      .card .shadow{ padding-inline: 10px; }
 }
@@ -184,4 +189,5 @@ article h2+p{ margin-bottom: 4rem;}
      .col-p-12{ grid-column: span 12; }
      .works .collapse .flex{ flex-flow: column;}
      .f-bottom .flex{ flex-flow: column; gap: 2rem;}
+     header h1{font-size: 30px;}
 }

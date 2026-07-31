@@ -5,7 +5,8 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>IT Website</title>
      <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body>
      <div class="wrap-1">
@@ -31,19 +32,59 @@
                          </div>
                     </div>
                </header>
-               <div role="banner" class="banner">
-                    <div class="row align-item-center">
-                         <div class="col-6 col-t-12">
-                              <div class="banner-text">
-                                   <h2>Software solution providers that help brands thrive and stand out</h2>
-                                   <p>Since 2014, we have been exploring the world of design and development offering our expertise in web and mobile. It is perfect fusion of innovation, development and execution at one place.</p>
-                                   <a href="">EXPLORE MORE</a>
+                    <div class="slider">
+                         <div role="banner" class="banner">
+                              <div class="row align-item-center">
+                                   <div class="col-6 col-t-12">
+                                        <div class="banner-text">
+                                             <h2>Software solution providers that help brands thrive and stand out</h2>
+                                             <p>Since 2014, we have been exploring the world of design and development offering our
+                                                  expertise in web and mobile. It is perfect fusion of innovation, development and
+                                                  execution at one place.</p>
+                                             <a href="">EXPLORE MORE 1</a>
+                                        </div>
+                                   </div>
+                                   <div class="col-6 col-t-12 col-t-before">
+                                        <img srcset="img/service-icon-2x.webp 1.25x" src="img/service-icon.webp" alt="" width="535"
+                                             height="499" class="img-resp">
+                                   </div>
                               </div>
                          </div>
-                         <div class="col-6 col-t-12 col-t-before">
-                              <img srcset="img/service-icon-2x.webp 1.25x" src="img/service-icon.webp"  alt="" width="535" height="499" class="img-resp">
+                         <div role="banner" class="banner">
+                              <div class="row align-item-center">
+                                   <div class="col-6 col-t-12">
+                                        <div class="banner-text">
+                                             <h2>Software solution providers that help brands thrive and stand out</h2>
+                                             <p>Since 2014, we have been exploring the world of design and development offering our
+                                                  expertise in web and mobile. It is perfect fusion of innovation, development and
+                                                  execution at one place.</p>
+                                             <a href="">EXPLORE MORE 2</a>
+                                        </div>
+                                   </div>
+                                   <div class="col-6 col-t-12 col-t-before">
+                                        <img srcset="img/service-icon-2x.webp 1.25x" src="img/service-icon.webp" alt="" width="535"
+                                             height="499" class="img-resp">
+                                   </div>
+                              </div>
                          </div>
-                    </div>
+                         <div role="banner" class="banner">
+                              <div class="row align-item-center">
+                                   <div class="col-6 col-t-12">
+                                        <div class="banner-text">
+                                             <h2>Software solution providers that help brands thrive and stand out</h2>
+                                             <p>Since 2014, we have been exploring the world of design and development offering our
+                                                  expertise in web and mobile. It is perfect fusion of innovation, development and
+                                                  execution at one place.</p>
+                                             <a href="">EXPLORE MORE 3</a>
+                                        </div>
+                                   </div>
+                                   <div class="col-6 col-t-12 col-t-before">
+                                        <img srcset="img/service-icon-2x.webp 1.25x" src="img/service-icon.webp" alt="" width="535"
+                                             height="499" class="img-resp">
+                                   </div>
+                              </div>
+                         </div>
+                         
                </div>
           </div>
      </div>
@@ -140,9 +181,9 @@
                     </div>
                     <div class="works">
                          <ul class="flex">
-                              <li class="active">
+                              <li>
                                    <div class="flex">
-                                        <a class="vert" href="">Our Mission</a>
+                                        <a class="vert active" href="">Our Mission</a>
                                         <div class="collapse">
                                              <div class="flex align-item-center">
                                                   <div class="pic">
@@ -370,6 +411,37 @@
                </div>
           </div>
      </footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>"use strict";
+$(function(){
+     AOS.init();
+     $(".menu").click(function(){
+          $("nav").slideToggle();
+          $(this).toggleClass("active");
+     });
 
+     $(".wrap-2 .vert").click(function(e){
+          e.preventDefault();
+
+          $(".wrap-2 .vert").removeClass("active");
+          $(this).addClass("active");
+
+          $(".wrap-2 .collapse").fadeOut(0);
+          $(this).next().fadeIn();
+
+     });
+
+     $(".slider").slick({
+          autoplay:true,
+          arrows:false,
+          
+     })
+
+
+
+
+});
+</script>
 </body>
 </html>
