@@ -17,10 +17,12 @@ $(function(){
 
      });
 
-     $(".slider").slick({
-          autoplay:true,
-          arrows:false
-     })
+     if( $(".slider").length ){
+          $(".slider").slick({
+               autoplay:true,
+               arrows:false
+          });
+     }
 
 
 
