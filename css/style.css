@@ -2,6 +2,7 @@
 *,::before,::after{margin: 0; box-sizing: border-box;}
 a{text-decoration: none;}
 img{ vertical-align: bottom;}
+button{ cursor: pointer;}
 
 html{ 
      font-size: 10px;
@@ -70,6 +71,10 @@ article h2+p{ margin-bottom: 4rem;}
 .box.bg{ background: var(--blue); color: var(--white);}
 .box.bt{ position: relative;}
 .box.bt::before{ content: ''; position: absolute; width: 100%; height: 15px; background: var(--blue); left: 0; top: 0; border-radius: 5px 5px 0 0;}
+.contactform{ margin: 10rem 0;  }
+.contactform div{ margin: 2rem 0;}
+.contactform input{ padding: .5rem 1rem; border: 1px solid #000; border-radius: 5px; }
+.contactform button{  padding: .5rem 1rem; border: 1px solid #000; border-radius: 5px; background: #fff; }
 
 .info{margin: 10rem 0; text-align: center;}
 .info p{ font-size: 24px; font-weight: 600;}
